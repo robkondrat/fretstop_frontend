@@ -5,7 +5,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-US">
         {/* <Head></Head> */}
-        <body>
+        <body style={{backgroundColor: "#FF3CC7"}}>
           <Main />
           <NextScript />
         </body>
@@ -13,3 +13,4 @@ export default class MyDocument extends Document {
     );
   }
 }
+
