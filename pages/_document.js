@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-US">
         <Head />
-        <body style={{backgroundColor: "#FF3CC7"}}>
+        <body>
           <Main />
           <NextScript />
         </body>

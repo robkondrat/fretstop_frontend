@@ -11,13 +11,13 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    --pink: #FF3CC7;
-    --yellow: #F0F600;
-    --violet: #4C1A57;
-    --violet: var(--violet);
-    --lightGrey: #e1e1e1;
-    --lightGrey: var(---lightGray);
-    --offWhite: #ededed;
+    --red: #E63946;
+    --blue: #457B9D;
+    --darkBlue: #1D3557;
+    --darkBlue: var(--darkBlue);
+    --lightBlue: #A8DADC;
+    --lightBlue: var(---lightBlue);
+    --offWhite: #F1FAEE;
     --maxWidth: 1000px;
     --bs: 0 12px 24px 0 rgba(0,0,0,0.09);
     box-sizing: border-box;
@@ -31,10 +31,11 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
+    background: #A8DADC;
   }
   a {
     text-decoration: none;
-    color: var(---violet);
+    color: var(---darkBlue);
   }
   a:hover {
     text-decoration: underline;
