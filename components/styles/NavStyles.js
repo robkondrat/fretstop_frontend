@@ -5,6 +5,7 @@ const NavStyles = styled.ul`
   padding: 0;
   display: flex;
   justify-self: end;
+  color: var(--darkBlue);
   font-size: 2rem;
   a,
   button {
@@ -25,7 +26,7 @@ const NavStyles = styled.ul`
     &:before {
       content: '';
       width: 2px;
-      background: var(--lightGray);
+      background: var(--blue);
       height: 100%;
       left: 0;
       position: absolute;
@@ -34,8 +35,8 @@ const NavStyles = styled.ul`
       bottom: 0;
     }
     &:after {
-      height: 2px;
-      background: red;
+      height: 6px;
+      background: var(--offWhite);
       content: '';
       width: 0;
       position: absolute;
@@ -58,7 +59,7 @@ const NavStyles = styled.ul`
     }
   }
   @media (max-width: 1300px) {
-    border-top: 1px solid var(--lightGray);
+    border-top: 1px solid var(--blue);
     width: 100%;
     justify-content: center;
     font-size: 1.5rem;
