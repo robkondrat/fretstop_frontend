@@ -1,5 +1,9 @@
+import CreateGuitar from "../components/CreateGuitar";
+
 export default function SellPage() {
   return (
-    <p>Hello I am the sell page!</p>
+    <div>
+      <CreateGuitar />
+    </div>
   )
 }
