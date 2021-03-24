@@ -15,12 +15,13 @@ const loading = keyframes`
 const Form = styled.form`
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05);
   background: rgba(0, 0, 0, 0.02);
-  border: 5px solid white;
+  border: 5px solid var(--offWhite);
   padding: 20px;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   line-height: 1.5;
   font-weight: 600;
   label {
+    color: var(--darkBlue);
     display: block;
     margin-bottom: 1rem;
   }
@@ -29,17 +30,17 @@ const Form = styled.form`
   select {
     width: 100%;
     padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid black;
+    font-size: 2rem;
+    border: 3px solid var(--darkBlue);
     &:focus {
       outline: 0;
-      border-color: var(--red);
+      border-color: var(--blue);
     }
   }
   button,
   input[type='submit'] {
     width: auto;
-    background: red;
+    background: var(--darkBlue);
     color: white;
     border: 0;
     font-size: 2rem;
@@ -59,14 +60,14 @@ const Form = styled.form`
       display: block;
       background-image: linear-gradient(
         to right,
-        #ff3019 0%,
-        #e2b04a 50%,
-        #ff3019 100%
+        #F1FAEE 0%,
+        #1D3557 50%,
+        #F1FAEE 100%
       );
     }
     &[aria-busy='true']::before {
       background-size: 50% auto;
-      animation: ${loading} 0.5s linear infinite;
+      animation: ${loading} 0.9s linear infinite;
     }
   }
 `;
