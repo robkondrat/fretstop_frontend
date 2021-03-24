@@ -3,7 +3,7 @@ import gql from "graphql-tag";
 import styled from "styled-components";
 import Guitar from "./Guitar";
 
-const ALL_GUITARS_QUERY = gql`
+export const ALL_GUITARS_QUERY = gql`
   query ALL_GUITARS_QUERY {
     allGuitars {
       id

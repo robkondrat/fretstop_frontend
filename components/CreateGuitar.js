@@ -2,7 +2,9 @@ import { useMutation } from "@apollo/client";
 import gql from "graphql-tag";
 import useForm from "../lib/useForm";
 import Form from "./styles/Form";
-import DisplayError from './ErrorMessage';
+import DisplayError from "./ErrorMessage";
+import { ALL_GUITARS_QUERY } from "./Guitars";
+import Router from "next/router";
 
 const CREATE_GUITAR_MUTATION = gql`
   mutation CREATE_GUITAR_MUTATION(
@@ -30,16 +32,17 @@ const CREATE_GUITAR_MUTATION = gql`
 
 export default function CreateGuitar() {
   const { inputs, handleChange, clearForm, resetForm } = useForm({
+    image: '',
     name: "",
     price: "",
     description: "",
-    image: "",
   });
 
   const [createGuitar, { loading, error, data }] = useMutation(
     CREATE_GUITAR_MUTATION,
     {
       variables: inputs,
+      refetchQueries: [{ query: ALL_GUITARS_QUERY }],
     }
   );
 
@@ -48,11 +51,14 @@ export default function CreateGuitar() {
       onSubmit={async (e) => {
         e.preventDefault();
         // submit the input fields to the backend:
-        await createGuitar();
+        const res = await createGuitar();
         clearForm();
+        Router.push({
+          pathname: `/product/${res.data.createGuitar.id}`,
+        });
       }}
     >
-      <DisplayError error={error}/>
+      <DisplayError error={error} />
       <fieldset disabled={loading} aria-busy={loading}>
         <label htmlFor="name">
           Name
