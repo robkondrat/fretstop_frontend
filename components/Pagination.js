@@ -6,7 +6,7 @@ import DisplayError from './ErrorMessage';
 import PaginationStyles from './styles/PaginationStyles';
 import { perPage } from '../config';
 
-const PAGINATION_QUERY = gql`
+export const PAGINATION_QUERY = gql`
   query PAGINATION_QUERY{
     _allGuitarsMeta {
       count
@@ -27,14 +27,14 @@ export default function Pagination({ page }) {
       <Head>
         <title>Fret Stop - Page {page} of ___</title>
       </Head>
-      <Link href={`/products/${page - 1}`}>
+      <Link href={`/guitars/${page - 1}`}>
         <a aria-disabled={page <= 1}>← Prev</a>
       </Link>
       <p>
         Page {page} of {pageCount}
       </p>
       <p>{count} Items Total</p>
-      <Link href={`/products/${page + 1}`}>
+      <Link href={`/guitars/${page + 1}`}>
         <a aria-disabled={page >= pageCount}>Next →</a>
       </Link>
     </PaginationStyles>

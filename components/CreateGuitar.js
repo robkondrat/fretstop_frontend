@@ -54,7 +54,7 @@ export default function CreateGuitar() {
         const res = await createGuitar();
         clearForm();
         Router.push({
-          pathname: `/product/${res.data.createGuitar.id}`,
+          pathname: `/guitar/${res.data.createGuitar.id}`,
         });
       }}
     >
