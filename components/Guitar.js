@@ -3,6 +3,7 @@ import ItemStyles from "./styles/ItemStyles";
 import Title from "./styles/Title";
 import PriceTag from "./styles/PriceTag";
 import formatMoney from "../lib/formatMoney";
+import DeleteGuitar from "./DeleteGuitar";
 
 export default function Guitar({ guitar }) {
   return (
@@ -24,6 +25,7 @@ export default function Guitar({ guitar }) {
         >
           Edit ✏
         </Link>
+        <DeleteGuitar id={guitar.id}>Delete</DeleteGuitar>
       </div>
     </ItemStyles>
   );
