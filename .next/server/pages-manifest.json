@@ -3,6 +3,6 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/sell": "pages/sell.js",
-  "/guitars": "pages/guitars.js",
+  "/product/[id]": "pages/product/[id].js",
   "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
 }

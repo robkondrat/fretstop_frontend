@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default function SingleGuitar() {}","map":{"version":3,"sources":["/Users/robkondratowicz/Desktop/Actualize/fretstop_frontend/pages/product/[id].js"],"names":["SingleGuitar"],"mappings":"AAAA,eAAe,SAASA,YAAT,GAAwB,CAAE","sourcesContent":["export default function SingleGuitar() {}"]},"metadata":{},"sourceType":"module"}
