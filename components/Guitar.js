@@ -4,6 +4,7 @@ import Title from "./styles/Title";
 import PriceTag from "./styles/PriceTag";
 import formatMoney from "../lib/formatMoney";
 import DeleteGuitar from "./DeleteGuitar";
+import AddToCart from "./AddToCart";
 
 export default function Guitar({ guitar }) {
   return (
@@ -25,6 +26,7 @@ export default function Guitar({ guitar }) {
         >
           Edit ✏
         </Link>
+        <AddToCart id={guitar.id} />
         <DeleteGuitar id={guitar.id}>Delete</DeleteGuitar>
       </div>
     </ItemStyles>

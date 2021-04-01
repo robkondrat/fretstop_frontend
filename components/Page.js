@@ -30,6 +30,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     background: #A8DADC;
     font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #1D3557;
     padding: 0;
     margin: 0;
     font-size: 1.5rem;

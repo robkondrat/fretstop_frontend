@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const CartStyles = styled.div`
   padding: 20px;
   position: relative;
-  background: var(--darkBlue);
+  background: var(--blue);
   color: var(--offWhite);
   position: fixed;
   height: 100%;
@@ -20,12 +20,12 @@ const CartStyles = styled.div`
   grid-template-rows: auto 1fr auto;
   ${(props) => props.open && `transform: translateX(0);`};
   header {
-    border-bottom: 5px solid var(--black);
+    border-bottom: 5px solid var(--offWhite);
     margin-bottom: 2rem;
     padding-bottom: 2rem;
   }
   footer {
-    border-top: 10px double var(--black);
+    border-top: 10px double var(--offWhite);
     margin-top: 2rem;
     padding-top: 2rem;
     display: grid;
