@@ -28,6 +28,11 @@
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/guitar/[id].js"
+    ],
+    "/guitars": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/guitars.js"
     ]
   },
   "ampFirstPages": []
