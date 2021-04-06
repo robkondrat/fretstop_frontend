@@ -5,6 +5,7 @@ import PriceTag from "./styles/PriceTag";
 import formatMoney from "../lib/formatMoney";
 import DeleteGuitar from "./DeleteGuitar";
 import AddToCart from "./AddToCart";
+import Null from "./HideToNonUsers";
 
 export default function Guitar({ guitar }) {
   return (
@@ -16,18 +17,20 @@ export default function Guitar({ guitar }) {
       <PriceTag>{formatMoney(guitar.price)}</PriceTag>
       <p>{guitar.description}</p>
       <div className="buttonList">
-        <Link
-          href={{
-            pathname: "update",
-            query: {
-              id: guitar.id,
-            },
-          }}
-        >
-          Edit ✏
-        </Link>
-        <AddToCart id={guitar.id} />
-        <DeleteGuitar id={guitar.id}>Delete</DeleteGuitar>
+        <Null>
+          <Link
+            href={{
+              pathname: "update",
+              query: {
+                id: guitar.id,
+              },
+            }}
+          >
+            Edit ✏
+          </Link>
+          <AddToCart id={guitar.id} />
+          <DeleteGuitar id={guitar.id}>Delete</DeleteGuitar>
+        </Null>
       </div>
     </ItemStyles>
   );

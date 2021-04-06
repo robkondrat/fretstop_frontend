@@ -71,7 +71,7 @@ export default function OrdersPage() {
                 <div className="images">
                   {order.items.map((item) => (
                     <img
-                      key={item.id}
+                      key={`item-${item.id}`}
                       src={item.photo?.image?.publicUrlTransformed}
                       alt={item.name}
                     />
