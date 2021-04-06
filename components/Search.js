@@ -35,7 +35,6 @@ export default function Search() {
     }
   );
   const items = data?.searchTerms || [];
-  console.log(items);
   const findItemsButChill = debounce(findItems, 350);
   resetIdCounter();
   const {

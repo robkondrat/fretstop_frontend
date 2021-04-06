@@ -8,7 +8,6 @@ import { useUser } from "./User";
 export default function Nav() {
   const user = useUser();
   const { openCart } = useCart();
-  console.log();
   return (
     <NavStyles>
       <Link href="/guitars">Guitars</Link>
@@ -22,7 +21,7 @@ export default function Nav() {
             My Cart
             <CartCount
               count={user.cart.reduce(
-                (tally, cartItem) => tally + cartItem.quantity,
+                (tally, cartItem) => tally + (cartItem.guitar ? cartItem.quantity : 0),
                 0
               )}
             />
