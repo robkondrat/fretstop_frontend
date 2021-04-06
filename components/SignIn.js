@@ -28,11 +28,12 @@ export default function SignIn() {
     email: "",
     password: "",
   });
-  const [signin, { data, loading }] = useMutation(SIGNIN_MUTATION, {
+  const [signin, { data, loading, queryError }] = useMutation(SIGNIN_MUTATION, {
     variables: inputs,
     // refetch the currently logged in user
     refetchQueries: [{ query: CURRENT_USER_QUERY }],
   });
+
 
   async function handleSubmit(e) {
     e.preventDefault(); //stop form from submitting
